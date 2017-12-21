@@ -13,9 +13,11 @@ class ViewController: BPViewController {
     @IBOutlet weak var imageV: UIImageView!
     @IBOutlet weak var butt: UIView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.butt.tag = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +32,8 @@ class ViewController: BPViewController {
     }
     
     @IBAction func loginTapped() {
-        
-        self.view.animateCenterToLeft()
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController")
+        self.bpPush(viewController: secondVC!)
     }
 
 

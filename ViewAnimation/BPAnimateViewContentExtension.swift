@@ -40,22 +40,93 @@ extension UIView {
     
     //MARK:- Animation methods
     
-    func animateCenterToLeft() {
+    func animateHalfWayTowardsLeft(isAnimated: Bool = true, completionHandler: @escaping () -> Void = {}) {
+        
+        var animationCompleted: Int = 0
+        var animationCounter: Int = 0
+        
         for view in self.subviews {
-            view.animateCenterToLeft()
+            
+            view.animateHalfWayTowardsLeft(isAnimated: isAnimated)
+            
             if view.BPDelay == NSNotFound {
-                print("NotFound\n\n")
+                continue
+            } else {
+                
+                animationCounter = animationCounter + 1
+                
+                if isAnimated {
+                    
+                    UIView.animate(withDuration: 0.5,
+                                   delay: TimeInterval(CGFloat(view.BPDelay) * 0.25),
+                                   options: UIViewAnimationOptions.curveEaseInOut,
+                                   animations: {
+                                    view.frame.origin.x = view.frame.origin.x - UIView.screenWidth
+                                    
+                                    if !(0...UIView.screenWidth ~= view.frame.origin.x) {
+                                        view.alpha = 0
+                                    }
+                                    
+                    }, completion: { (completed) in
+                        animationCompleted = animationCompleted + 1
+                        if animationCounter == animationCompleted {
+                            completionHandler()
+                        }
+                    })
+                    
+                } else {
+                    view.frame.origin.x = view.frame.origin.x - UIView.screenWidth
+                    
+                    if !(0...UIView.screenWidth ~= view.frame.origin.x) {
+                        view.alpha = 0
+                    }
+                    
+                }
+            }
+            
+        }
+        
+    }
+    
+    func animateHalfWayTowardsRight(isAnimated: Bool = true, completionHandler: @escaping () -> Void = {}) {
+        
+        var animationCompleted: Int = 0
+        var animationCounter: Int = 0
+        
+        for view in self.subviews {
+            
+            view.animateHalfWayTowardsRight(isAnimated: isAnimated)
+            
+            if view.BPDelay == NSNotFound {
                 continue
             } else {
                 print("Found\n\n")
-                UIView.animate(withDuration: 0.5,
-                               delay: TimeInterval(CGFloat(view.BPDelay) * 0.25),
-                               options: UIViewAnimationOptions.curveEaseInOut,
-                               animations: {
-                                view.frame.origin.x = self.frame.origin.x - UIView.screenWidth
-                }, completion: { (completed) in
+                
+                animationCounter = animationCounter + 1
+                
+                if isAnimated {
                     
-                })
+                    UIView.animate(withDuration: 0.5,
+                                   delay: TimeInterval(CGFloat(view.BPDelay) * 0.25),
+                                   options: UIViewAnimationOptions.curveEaseInOut,
+                                   animations: {
+                                    view.frame.origin.x = view.frame.origin.x + UIView.screenWidth
+                                    
+                                    view.alpha = 1
+                                    
+                                    
+                    }, completion: { (completed) in
+                        animationCompleted = animationCompleted + 1
+                        if animationCounter == animationCompleted {
+                            completionHandler()
+                        }
+                    })
+                    
+                } else {
+                    view.frame.origin.x = view.frame.origin.x + UIView.screenWidth
+                    view.alpha = 1
+                }
+                
             }
             
         }

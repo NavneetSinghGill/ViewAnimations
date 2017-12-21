@@ -16,6 +16,8 @@
 		53FE84B01FEBBF9700986E69 /* ViewAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE84AF1FEBBF9700986E69 /* ViewAnimationUITests.swift */; };
 		53FE84BE1FEBBFAF00986E69 /* BPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE84BD1FEBBFAF00986E69 /* BPViewController.swift */; };
 		53FE84C01FEBBFE000986E69 /* BPAnimateViewContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE84BF1FEBBFE000986E69 /* BPAnimateViewContentExtension.swift */; };
+		53FE84C41FEBD45500986E69 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE84C31FEBD45500986E69 /* SecondViewController.swift */; };
+		53FE84C61FEBEA8A00986E69 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE84C51FEBEA8A00986E69 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		53FE84B11FEBBF9700986E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53FE84BD1FEBBFAF00986E69 /* BPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPViewController.swift; sourceTree = "<group>"; };
 		53FE84BF1FEBBFE000986E69 /* BPAnimateViewContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPAnimateViewContentExtension.swift; sourceTree = "<group>"; };
+		53FE84C31FEBD45500986E69 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		53FE84C51FEBEA8A00986E69 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				53FE848F1FEBBF9600986E69 /* AppDelegate.swift */,
 				53FE84911FEBBF9600986E69 /* ViewController.swift */,
+				53FE84C31FEBD45500986E69 /* SecondViewController.swift */,
+				53FE84C51FEBEA8A00986E69 /* ThirdViewController.swift */,
 				53FE84BD1FEBBFAF00986E69 /* BPViewController.swift */,
 				53FE84BF1FEBBFE000986E69 /* BPAnimateViewContentExtension.swift */,
 				53FE84931FEBBF9600986E69 /* Main.storyboard */,
@@ -268,6 +274,8 @@
 				53FE84BE1FEBBFAF00986E69 /* BPViewController.swift in Sources */,
 				53FE84921FEBBF9600986E69 /* ViewController.swift in Sources */,
 				53FE84C01FEBBFE000986E69 /* BPAnimateViewContentExtension.swift in Sources */,
+				53FE84C41FEBD45500986E69 /* SecondViewController.swift in Sources */,
+				53FE84C61FEBEA8A00986E69 /* ThirdViewController.swift in Sources */,
 				53FE84901FEBBF9600986E69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
