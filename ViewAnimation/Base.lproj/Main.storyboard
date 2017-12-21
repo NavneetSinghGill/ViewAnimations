@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bMp-Nw-eyQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="kaz-Fh-fpb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="LoginViewController" id="bMp-Nw-eyQ" customClass="ViewController" customModule="ViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1iu-1W-OjH"/>
+                        <viewControllerLayoutGuide type="bottom" id="fuK-ef-ASr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cbA-Un-4gS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Bt-Vs-6We">
+                                <rect key="frame" x="15" y="205" width="345" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="bMp-Nw-eyQ" id="Ftg-Iz-pSx"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYL-7Y-Y6D">
+                                <rect key="frame" x="15" y="170" width="345" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.43137254899999999" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEz-v9-fXU">
+                                <rect key="frame" x="15" y="290" width="345" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="bMp-Nw-eyQ" id="Ujs-Eb-0eG"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTB-mW-Fb6">
+                                <rect key="frame" x="15" y="255" width="345" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.43137254899999999" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt3-aY-8q9">
+                                <rect key="frame" x="15" y="420" width="345" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.43137254899999999" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTapped" destination="bMp-Nw-eyQ" eventType="touchUpInside" id="60o-Rg-dQE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="eUv-cb-Fx6">
+                                <rect key="frame" x="151" y="40" width="73" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0sd-VJ-J1A"/>
+                                    <constraint firstAttribute="width" secondItem="eUv-cb-Fx6" secondAttribute="height" multiplier="8:11" id="OAz-yv-2LT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etq-Gi-KyA">
+                                <rect key="frame" x="0.0" y="455" width="375" height="212"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="514-Ub-tyO">
+                                        <rect key="frame" x="75" y="36" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.58431372550000005" green="0.98823529409999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eUv-cb-Fx6" firstAttribute="top" secondItem="1iu-1W-OjH" secondAttribute="bottom" constant="20" id="5nW-a1-pc5"/>
+                            <constraint firstAttribute="trailing" secondItem="6Bt-Vs-6We" secondAttribute="trailing" constant="15" id="6jI-mZ-h5t"/>
+                            <constraint firstItem="YTB-mW-Fb6" firstAttribute="leading" secondItem="KYL-7Y-Y6D" secondAttribute="leading" id="8tz-M6-EPB"/>
+                            <constraint firstItem="Gt3-aY-8q9" firstAttribute="width" secondItem="NEz-v9-fXU" secondAttribute="width" id="98d-Bq-I9Q"/>
+                            <constraint firstItem="NEz-v9-fXU" firstAttribute="top" secondItem="YTB-mW-Fb6" secondAttribute="bottom" constant="15" id="9PE-M4-kmq"/>
+                            <constraint firstItem="Gt3-aY-8q9" firstAttribute="centerX" secondItem="cbA-Un-4gS" secondAttribute="centerX" id="Dxs-TA-OZi"/>
+                            <constraint firstItem="Gt3-aY-8q9" firstAttribute="top" secondItem="NEz-v9-fXU" secondAttribute="bottom" constant="100" id="J4f-Hz-phg"/>
+                            <constraint firstItem="etq-Gi-KyA" firstAttribute="top" secondItem="Gt3-aY-8q9" secondAttribute="bottom" id="LXM-Gm-JHb"/>
+                            <constraint firstItem="NEz-v9-fXU" firstAttribute="leading" secondItem="KYL-7Y-Y6D" secondAttribute="leading" id="LXV-OJ-Fou"/>
+                            <constraint firstItem="NEz-v9-fXU" firstAttribute="width" secondItem="6Bt-Vs-6We" secondAttribute="width" id="PDJ-xM-6Px"/>
+                            <constraint firstAttribute="trailing" secondItem="KYL-7Y-Y6D" secondAttribute="trailing" constant="15" id="QOd-Zx-7UC"/>
+                            <constraint firstItem="eUv-cb-Fx6" firstAttribute="centerX" secondItem="cbA-Un-4gS" secondAttribute="centerX" id="RE8-Mz-JK1"/>
+                            <constraint firstItem="6Bt-Vs-6We" firstAttribute="top" secondItem="KYL-7Y-Y6D" secondAttribute="bottom" constant="15" id="VEf-Bk-viC"/>
+                            <constraint firstAttribute="trailing" secondItem="YTB-mW-Fb6" secondAttribute="trailing" constant="15" id="f7i-pt-pmY"/>
+                            <constraint firstItem="EoS-68-hq6" firstAttribute="trailing" secondItem="etq-Gi-KyA" secondAttribute="trailing" id="gfJ-Vm-c2A"/>
+                            <constraint firstItem="6Bt-Vs-6We" firstAttribute="leading" secondItem="KYL-7Y-Y6D" secondAttribute="leading" id="hiQ-0o-dOP"/>
+                            <constraint firstItem="KYL-7Y-Y6D" firstAttribute="top" secondItem="1iu-1W-OjH" secondAttribute="bottom" constant="150" id="llp-co-6Hk"/>
+                            <constraint firstItem="etq-Gi-KyA" firstAttribute="leading" secondItem="EoS-68-hq6" secondAttribute="leading" id="ndg-ha-g5P"/>
+                            <constraint firstItem="fuK-ef-ASr" firstAttribute="top" secondItem="etq-Gi-KyA" secondAttribute="bottom" id="oFd-uO-CHo"/>
+                            <constraint firstItem="YTB-mW-Fb6" firstAttribute="top" secondItem="6Bt-Vs-6We" secondAttribute="bottom" constant="20" id="xN7-w4-cEq"/>
+                            <constraint firstItem="KYL-7Y-Y6D" firstAttribute="leading" secondItem="cbA-Un-4gS" secondAttribute="leading" constant="15" id="xWi-43-4Nd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EoS-68-hq6"/>
                     </view>
+                    <connections>
+                        <outlet property="butt" destination="Gt3-aY-8q9" id="GOv-rD-6Jf"/>
+                        <outlet property="imageV" destination="eUv-cb-Fx6" id="veQ-89-3na"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="316-ZA-1ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="55.322338830584712"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchLogo" width="206" height="277"/>
+    </resources>
 </document>
