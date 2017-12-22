@@ -15,9 +15,5 @@ class ThirdViewController: BPViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func dismiss() {
-        self.bpPopViewController()
-    }
 
 }

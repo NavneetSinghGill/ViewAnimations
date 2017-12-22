@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "LaunchLogo@2x.png",
+      "filename" : "deviceNotification@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "LaunchLogo@3x.png",
+      "filename" : "deviceNotification@3x.png",
       "scale" : "3x"
     }
   ],
