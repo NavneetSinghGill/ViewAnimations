@@ -1,0 +1,12 @@
+PODS:
+  - BPViewsSubviewsInOutAnimation (1.2.0)
+
+DEPENDENCIES:
+  - BPViewsSubviewsInOutAnimation
+
+SPEC CHECKSUMS:
+  BPViewsSubviewsInOutAnimation: 6c8bbe7538e201238f4515759046087e0bf1ac59
+
+PODFILE CHECKSUM: 8e6141c644da4e99e9b256c05f682551fd7d5465
+
+COCOAPODS: 1.3.1

@@ -95,28 +95,45 @@
                                     <action selector="loginTapped" destination="bMp-Nw-eyQ" eventType="touchUpInside" id="60o-Rg-dQE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deviceNotification" translatesAutoresizingMaskIntoConstraints="NO" id="y1W-fY-DpA">
-                                <rect key="frame" x="162" y="114" width="50" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="xD" placeholder="AAAaaaaaaaa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-Ss-iPZ" customClass="FloatingHeaderTextField" customModule="ViewAnimation">
+                                <rect key="frame" x="10" y="109" width="355" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="eCD-Wi-wGs"/>
-                                    <constraint firstAttribute="width" constant="50" id="ewN-cc-SXA"/>
+                                    <constraint firstAttribute="height" constant="45" id="oCU-PH-02P"/>
                                 </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="BPDelay">
-                                        <integer key="value" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.99561941964285716" green="0.3816964285714286" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inActiveColor">
+                                        <color key="value" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </imageView>
+                                <connections>
+                                    <outlet property="delegate" destination="bMp-Nw-eyQ" id="fWH-3L-IMY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v13-lE-wm8">
+                                <rect key="frame" x="164" y="532" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login2"/>
+                                <connections>
+                                    <action selector="login2Tapped" destination="bMp-Nw-eyQ" eventType="touchUpInside" id="XPf-AE-yeM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="y1W-fY-DpA" firstAttribute="top" secondItem="1iu-1W-OjH" secondAttribute="bottom" constant="50" id="4JT-uv-dWx"/>
+                            <constraint firstItem="EoS-68-hq6" firstAttribute="trailing" secondItem="9Gn-Ss-iPZ" secondAttribute="trailing" constant="10" id="3AH-Pg-YxG"/>
                             <constraint firstAttribute="trailing" secondItem="6Bt-Vs-6We" secondAttribute="trailing" constant="15" id="6jI-mZ-h5t"/>
                             <constraint firstItem="YTB-mW-Fb6" firstAttribute="leading" secondItem="KYL-7Y-Y6D" secondAttribute="leading" id="8tz-M6-EPB"/>
                             <constraint firstItem="Gt3-aY-8q9" firstAttribute="width" secondItem="NEz-v9-fXU" secondAttribute="width" id="98d-Bq-I9Q"/>
                             <constraint firstItem="NEz-v9-fXU" firstAttribute="top" secondItem="YTB-mW-Fb6" secondAttribute="bottom" constant="15" id="9PE-M4-kmq"/>
+                            <constraint firstItem="9Gn-Ss-iPZ" firstAttribute="leading" secondItem="EoS-68-hq6" secondAttribute="leading" constant="10" id="9hV-FB-e2L"/>
                             <constraint firstItem="Gt3-aY-8q9" firstAttribute="centerX" secondItem="cbA-Un-4gS" secondAttribute="centerX" id="Dxs-TA-OZi"/>
-                            <constraint firstItem="y1W-fY-DpA" firstAttribute="centerX" secondItem="cbA-Un-4gS" secondAttribute="centerX" id="H0r-PJ-Eub"/>
                             <constraint firstItem="Gt3-aY-8q9" firstAttribute="top" secondItem="NEz-v9-fXU" secondAttribute="bottom" constant="100" id="J4f-Hz-phg"/>
                             <constraint firstItem="NEz-v9-fXU" firstAttribute="leading" secondItem="KYL-7Y-Y6D" secondAttribute="leading" id="LXV-OJ-Fou"/>
                             <constraint firstItem="NEz-v9-fXU" firstAttribute="width" secondItem="6Bt-Vs-6We" secondAttribute="width" id="PDJ-xM-6Px"/>
@@ -125,12 +142,16 @@
                             <constraint firstAttribute="trailing" secondItem="YTB-mW-Fb6" secondAttribute="trailing" constant="15" id="f7i-pt-pmY"/>
                             <constraint firstItem="6Bt-Vs-6We" firstAttribute="leading" secondItem="KYL-7Y-Y6D" secondAttribute="leading" id="hiQ-0o-dOP"/>
                             <constraint firstItem="KYL-7Y-Y6D" firstAttribute="top" secondItem="1iu-1W-OjH" secondAttribute="bottom" constant="150" id="llp-co-6Hk"/>
+                            <constraint firstItem="9Gn-Ss-iPZ" firstAttribute="top" secondItem="1iu-1W-OjH" secondAttribute="bottom" constant="45" id="oMm-Gm-tuN"/>
                             <constraint firstItem="YTB-mW-Fb6" firstAttribute="top" secondItem="6Bt-Vs-6We" secondAttribute="bottom" constant="20" id="xN7-w4-cEq"/>
                             <constraint firstItem="KYL-7Y-Y6D" firstAttribute="leading" secondItem="cbA-Un-4gS" secondAttribute="leading" constant="15" id="xWi-43-4Nd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EoS-68-hq6"/>
                     </view>
                     <navigationItem key="navigationItem" id="kuq-9z-gos"/>
+                    <connections>
+                        <outlet property="floatTF" destination="9Gn-Ss-iPZ" id="lBZ-BT-yPr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="316-ZA-1ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,7 +329,4 @@
             <point key="canvasLocation" x="-719" y="75"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="deviceNotification" width="42" height="42"/>
-    </resources>
 </document>
